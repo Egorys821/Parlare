@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://wvl0x3de4o0y"]
+
+[ext_resource type="Texture2D" uid="uid://j3755w6v0mvc" path="res://Art/objects/spike floor.png" id="1_7qtee"]
+
+[node name="Choosing" type="Node2D"]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = -1
+offset_left = 59.0
+offset_top = 70.0
+offset_right = 389.0
+offset_bottom = 237.0
+scale = Vector2(3, 3)
+columns = 6
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "spikes"
+icon = ExtResource("1_7qtee")
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "spikes"
+icon = ExtResource("1_7qtee")
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "spikes"
+icon = ExtResource("1_7qtee")
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "spikes"
+icon = ExtResource("1_7qtee")
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="Button5" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "spikes"
+icon = ExtResource("1_7qtee")
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true

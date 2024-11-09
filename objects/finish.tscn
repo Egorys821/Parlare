@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://b5rejiam6cl05"]
+[gd_scene load_steps=3 format=3 uid="uid://b5rejiam6cl05"]
 
-[node name="Finish" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dywxqg80wrlts" path="res://Art/objects/finish.png" id="1_c20s5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qmm5"]
+size = Vector2(59, 131)
+
+[node name="Finish" type="Area2D"]
+
+[node name="Finish" type="Sprite2D" parent="."]
+position = Vector2(0, -79)
+texture = ExtResource("1_c20s5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.5, -61.5)
+shape = SubResource("RectangleShape2D_2qmm5")

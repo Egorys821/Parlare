@@ -1,3 +1,34 @@
-[gd_scene format=3 uid="uid://cwn37uijvc2m4"]
+[gd_scene load_steps=5 format=3 uid="uid://cwn37uijvc2m4"]
 
-[node name="LandTrap" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://j3755w6v0mvc" path="res://Art/objects/spike floor.png" id="1_4dmmu"]
+[ext_resource type="Script" path="res://objects/land_trap.gd" id="1_g3gle"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73otb"]
+size = Vector2(200, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01d4w"]
+size = Vector2(198, 6)
+
+[node name="LandTrap" type="StaticBody2D"]
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_g3gle")
+
+[node name="SpikeFloor" type="Sprite2D" parent="."]
+position = Vector2(0, -50)
+texture = ExtResource("1_4dmmu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_73otb")
+
+[node name="DeathArea" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_01d4w")
+debug_color = Color(0.842644, 0.340995, 0.450806, 0.42)
+
+[connection signal="body_entered" from="DeathArea" to="." method="_on_death_area_body_entered"]
